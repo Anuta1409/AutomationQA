@@ -13,7 +13,7 @@ public class PrintTablesResults {
         int CNum, Rating, SNum;
         String CName, City;
         System.out.println("_____________________Clients Table______________________________");
-        System.out.println("CNum***" +"SNum***"+"Rating***"+"CName***********"+"City***"  );
+        System.out.println("CNum   |   SNum   |   Rating   |   CName   |   City"  );
         while(resultSet.next()){
             CNum = resultSet.getInt("CNum");
             SNum = resultSet.getInt("SNum");
@@ -22,7 +22,7 @@ public class PrintTablesResults {
             CName = resultSet.getString("CName");
             City = resultSet.getString("City");
 
-            System.out.println(CNum+"   "  +SNum+"      "+Rating+"     " +CName+"        " +City);
+            System.out.println(CNum+"    |   "  +SNum+"    |   "+Rating+"      |   " +CName+"    |   " +City);
 
         }
     }
@@ -32,7 +32,7 @@ public class PrintTablesResults {
         String SName, City;
         double Comm;
         System.out.println("_____________________Servant Table______________________________");
-        System.out.println("SNum***" +"SName***" +"Age***"+"City***"+"Comm***********" );
+        System.out.println("SNum   |   SName   |   Age   |   City   |   Comm" );
         while(resultSet.next()){
             SNum = resultSet.getInt("SNum");
             Age = resultSet.getInt("Age");
@@ -41,7 +41,7 @@ public class PrintTablesResults {
             SName = resultSet.getString("SName");
             City = resultSet.getString("City");
 
-            System.out.println(SNum+"   "  +SName+"      "+Age+"     " +City+"        " +Comm);
+            System.out.println(SNum+"    |   "+SName+"    |   "+Age+"    |   " +City+"    |   " +Comm);
 
         }
     }
@@ -51,14 +51,14 @@ public class PrintTablesResults {
         Date ODate;
         double Summa;
         System.out.println("_____________________Operation______________________________");
-        System.out.println("CNum***" +"ODate**********"+"ONum***"+"Summa"  );
+        System.out.println("CNum   |   ODate   |   ONum   |   Summa"  );
         while(resultSet.next()){
             CNum = resultSet.getInt("CNum");
             ONum = resultSet.getInt("ONum");
             ODate = resultSet.getDate("ODate");
             Summa = resultSet.getInt("Summa");
 
-            System.out.println(ONum+"   "  +ODate+"      "+CNum+"     " +Summa);
+            System.out.println(ONum+"    |   "+ODate+"    |   "+CNum+"    |   " +Summa);
 
         }
     }

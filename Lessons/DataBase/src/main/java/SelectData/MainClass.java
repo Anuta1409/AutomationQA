@@ -5,8 +5,10 @@ package SelectData;
  */
 public class MainClass {
     public static void main(String[] args) {
-        ConnectionQuery connectionQuerC = new ConnectionQuery("jdbc:mysql://localhost/business", "Ann", "ann","SELECT * FROM c", "c");
-        ConnectionQuery connectionQueryS = new ConnectionQuery("jdbc:mysql://localhost/business", "Ann", "ann","SELECT * FROM s", "s");
-        ConnectionQuery connectionQueryO = new ConnectionQuery("jdbc:mysql://localhost/business", "Ann", "ann","SELECT * FROM o","o");
+        ConnectionQuery connectionQuery = new ConnectionQuery("jdbc:mysql://localhost/business", "Ann", "ann");
+        connectionQuery.selectQuery("SELECT * FROM c", "c");
+        connectionQuery.selectQuery("SELECT * FROM s", "s");
+        connectionQuery.selectQuery("SELECT * FROM o", "o");
+        connectionQuery.finalize();
     }
 }
