@@ -7,4 +7,12 @@
     <groupId>anna.com</groupId>
     <artifactId>xmlwork</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>2.52.0</version>
+        </dependency>
+    </dependencies>
 </project>
