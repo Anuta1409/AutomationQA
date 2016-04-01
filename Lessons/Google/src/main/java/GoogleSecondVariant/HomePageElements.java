@@ -1,5 +1,6 @@
 package GoogleSecondVariant;
 
+import GoogleFirstVariant.Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,20 +9,20 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by Anna on 22.03.2016.
  */
-public class HomePageElements {
-    WebDriver driver;
+public class HomePageElements extends Page{
+   // WebDriver driver;
 
     @FindBy(name = "q")
     private WebElement searchField;
 
-    @FindBy(xpath = ".//*[@id='sblsbb']")
+    @FindBy(xpath = ".//*[@id='gb_70']")
     private WebElement searchButton;
 
     @FindBy(xpath = ".//*[@id='gb_70']")
     private WebElement goToGoogleAccountButton;
 
     public HomePageElements(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 

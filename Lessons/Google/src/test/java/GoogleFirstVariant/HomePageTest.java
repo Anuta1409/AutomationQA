@@ -30,7 +30,7 @@ public class HomePageTest {
     @Test
     public void testSearchFunction() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
-        homePage.searchFunction("Selenium");
+        homePage.goToServiceLoginPage();//("Selenium");
 
     }
 

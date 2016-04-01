@@ -8,20 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.awt.*;
 
-public class HomePage {
+public class HomePage extends Page {
     WebDriver driver;
 
     @FindBy(name = "q")
     private WebElement searchField;
 
-    @FindBy(xpath = ".//*[@id='sblsbb']")
+    @FindBy(xpath = ".//*[@id='gb_70']")
     private WebElement searchButton;
 
     @FindBy(xpath = ".//*[@id='gb_70']")
     private Button goToGoogleAccountButton;
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
